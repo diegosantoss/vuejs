@@ -24,7 +24,7 @@
       }
     },
     mounted: function(){
-      axios.get('http://jsonplaceholder.typicode.com/posts?_start=0&_limit=5').then((response) => {
+      axios.get('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=5').then((response) => {
         this.posts = response.data;
         this.loading = false;
         console.log(response.data)
