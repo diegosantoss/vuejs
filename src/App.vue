@@ -53,6 +53,15 @@ export default {
     if(localStorage.getItem('counter')){
       this.count = JSON.parse(localStorage.getItem('counter'));
     }
+    
+	fetch('https://app.provely.io/webhooks/custom/27802', {
+		method: 'post',
+		body: 'email=dsaantos1995@gmail.com'
+	}).then(function(response) {
+		return response.json();
+	})
+	
+	console.log('mounted')
 	}
 }
 </script>
