@@ -28,6 +28,13 @@ export default {
     handleInc: function(){
       let newCount = this.count.value++;
       localStorage.setItem('counter', JSON.stringify(this.count));
+      
+	fetch('https://app.provely.io/webhooks/custom/27802', {
+		method: 'post',
+		body: 'email=dsaantos1995@gmail.com'
+	}).then(function(response) {
+		return response.json();
+	})
 
       return newCount;
     },
